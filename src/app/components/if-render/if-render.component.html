@@ -1,0 +1,13 @@
+<div class="class">
+  <div>
+    <p *ngIf="canShow">Estamos vendo isso porque foi permitido</p>
+  </div>
+  <button (click)="canShow = !canShow">Esconder</button>
+
+  <h2 *ngIf="name === 'Israel'; else nameNotFound">O nome é Israel</h2>
+  <ng-template #nameNotFound>
+    <div>
+      <h2>O nome não foi encontrado</h2>
+    </div>
+  </ng-template>
+</div>
