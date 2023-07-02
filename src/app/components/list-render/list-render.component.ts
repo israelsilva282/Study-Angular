@@ -11,14 +11,15 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class ListRenderComponent {
   
-  constructor(private listService: ListService){}
+  constructor(private listService: ListService){
+    this.getAnimals();
+  }
   
-  animals: Animal[] = [
-    {name: "Turca", type: "Dog", age: 5},
-    {name: "Tom", type: "Cat", age: 3},
-    {name: "Jerry", type: "Mouse", age: 1},
-    {name: "Bob", type: "Horse", age: 10},
-  ];
+  animals: Animal[] = [];
+
+  getAnimals():void{
+    this.listService.getAll().subscribe((animals)=> this.animals = animals);
+  }
   
   animalDetails = ''
   showAge(animal: Animal){
