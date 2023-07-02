@@ -6,7 +6,7 @@
 
   <h2 *ngIf="name === 'Israel'; else nameNotFound">O nome é Israel</h2>
   <ng-template #nameNotFound>
-    <div>
+    <div #nameNotFound>
       <h2>O nome não foi encontrado</h2>
     </div>
   </ng-template>
