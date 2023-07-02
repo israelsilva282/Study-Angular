@@ -1,11 +1,16 @@
-<h1>Hello World</h1>
-<h2>Meu h2 sem css</h2>
-<app-first-component />
-<app-parent-data [user]="userData" [name]="userName"></app-parent-data>
-<app-directives />
-<app-if-render />
-<app-eventos />
-<app-emitter />
-<app-list-render />
-<app-pipes />
-<app-two-way-binding />
+<h1>Header</h1>
+<nav>
+  <a routerLink="/">first-component</a>
+  <a routerLink="/diretivas">Directives</a>
+  <a routerLink="/emitter">emitter</a>
+  <a routerLink="/eventos">eventos</a>
+  <a routerLink="/if-render">if-render</a>
+  <a routerLink="/list">list-render</a>
+  <a routerLink="/parent-data">parent-data</a>
+  <a routerLink="/pipes">pipes</a>
+  <a routerLink="/two-way-binding">two-way-binding</a>
+</nav>
+
+<router-outlet></router-outlet>
+
+<h1>Footer</h1>
